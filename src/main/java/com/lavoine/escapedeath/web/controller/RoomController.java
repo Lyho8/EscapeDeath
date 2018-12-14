@@ -19,7 +19,7 @@ public class RoomController {
 
 	@ApiOperation(value = "Fournit la liste des salles")
 	@GetMapping(value = "/rooms", produces = "application/json")
-	public List<Room> listerSalles(){		
+	public List<Room> listerSalles() {
 		return RoomDao.findAll();
 	}
 }

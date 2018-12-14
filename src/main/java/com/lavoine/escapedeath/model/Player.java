@@ -20,24 +20,25 @@ public class Player {
 	@Id
 	@GeneratedValue
 	private int id;
-	
+
+	@NotNull
 	private String name;
-	
+
 	private boolean hasPlayed;
-	
+
 	private boolean hidden;
-	
+
 	private boolean dead;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "current_room_id")
 	@JsonIgnore
 	@NotNull
 	private Room currentRoom;
-	
+
 	@Transient
 	private int currentRoomId;
-	
+
 	public int getCurrentRoomId() {
 		return currentRoom.getId();
 	}

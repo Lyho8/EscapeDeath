@@ -19,7 +19,7 @@ public class PlayerController {
 
 	@ApiOperation(value = "Fournit la liste des joueurs")
 	@GetMapping(value = "/players", produces = "application/json")
-	public List<Player> listerJoueurs(){		
+	public List<Player> listerJoueurs() {
 		return playerDao.findAll();
 	}
 }
