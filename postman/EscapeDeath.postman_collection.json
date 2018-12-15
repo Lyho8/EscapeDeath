@@ -15,7 +15,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": ""
+					"raw": "localhost:8989/players"
 				}
 			},
 			"response": []
@@ -30,7 +30,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": ""
+					"raw": "localhost:8989/rooms"
 				}
 			},
 			"response": []
