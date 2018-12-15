@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-sanitize.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Escape Death: Game!</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link rel="stylesheet" href="/main.css" />
+</head>
+<body>
+    <section class="hero is-fullheight has-background-black">
+		<div class="hero-body">
+			<div class="container">
+				<div ng-app="game" ng-controller="roomCtrl">
+					<p>Today's welcome message is:</p>
+					<h1><div ng-bind-html="rooms"></div></h1>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+    <script src="/js/game.js"></script>
+
+</body>
+</html>
