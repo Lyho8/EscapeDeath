@@ -85,10 +85,9 @@ INSERT INTO room(id, name) VALUES(81, 'W1');
 INSERT INTO player(id, name, has_played, hidden, dead, current_room_id) VALUES(1, 'Tueur' , false, false, false, 1);
 INSERT INTO player(id, name, has_played, hidden, dead, current_room_id) VALUES(2, 'Proie violette' , false, false, false, 2);
 INSERT INTO player(id, name, has_played, hidden, dead, current_room_id) VALUES(3, 'Proie bleue' , false, false, false, 1);
-INSERT INTO player(id, name, has_played, hidden, dead, current_room_id) VALUES(4, 'Proie verte' , false, false, false, 2);
 INSERT INTO player(id, name, has_played, hidden, dead, current_room_id) VALUES(4, 'Proie rouge' , false, false, false, 2);
-INSERT INTO player(id, name, has_played, hidden, dead, current_room_id) VALUES(4, 'Proie orange' , false, false, false, 2);
-INSERT INTO player(id, name, has_played, hidden, dead, current_room_id) VALUES(4, 'Proie blanche' , false, false, false, 2);
+INSERT INTO player(id, name, has_played, hidden, dead, current_room_id) VALUES(5, 'Proie orange' , false, false, false, 2);
+INSERT INTO player(id, name, has_played, hidden, dead, current_room_id) VALUES(6, 'Proie blanche' , false, false, false, 2);
 
 -- Voisinage des salles
 INSERT INTO neighbour_rooms(room1, room2) VALUES (1, 4);
