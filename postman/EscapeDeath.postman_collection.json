@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "Liste joueurs",
+			"name": "Lister joueurs",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -15,13 +15,20 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "localhost:8989/players"
+					"raw": "localhost:8989/players",
+					"host": [
+						"localhost"
+					],
+					"port": "8989",
+					"path": [
+						"players"
+					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Liste salles",
+			"name": "Lister salles",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -30,7 +37,136 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "localhost:8989/rooms"
+					"raw": "localhost:8989/rooms",
+					"host": [
+						"localhost"
+					],
+					"port": "8989",
+					"path": [
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cacher joueur 1",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8989/player/1/togglehidden",
+					"host": [
+						"localhost"
+					],
+					"port": "8989",
+					"path": [
+						"player",
+						"1",
+						"togglehidden"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lister joueurs visibles salle 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8989/room/1/visibleplayers",
+					"host": [
+						"localhost"
+					],
+					"port": "8989",
+					"path": [
+						"room",
+						"1",
+						"visibleplayers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lister joueurs cachés salle 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8989/room/1/hiddenplayers",
+					"host": [
+						"localhost"
+					],
+					"port": "8989",
+					"path": [
+						"room",
+						"1",
+						"hiddenplayers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Déplacer joueur 1 vers salle 2 (invalide)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8989/player/1/move/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8989",
+					"path": [
+						"player",
+						"1",
+						"move",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Déplacer joueur 1 vers salle 4 (valide)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8989/player/1/move/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8989",
+					"path": [
+						"player",
+						"1",
+						"move",
+						"4"
+					]
 				}
 			},
 			"response": []
