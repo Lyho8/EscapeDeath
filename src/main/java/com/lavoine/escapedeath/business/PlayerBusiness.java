@@ -56,4 +56,13 @@ public class PlayerBusiness {
 
 		return p;
 	}
+	
+	public Player tuerJoueur(int id) {
+		Player p = playerDao.findById(id).get();	
+		
+		p.setDead(true);
+		playerDao.save(p);
+		
+		return p;
+	}
 }
