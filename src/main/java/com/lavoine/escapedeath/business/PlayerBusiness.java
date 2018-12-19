@@ -52,17 +52,30 @@ public class PlayerBusiness {
 		}
 
 		p.setCurrentRoom(r);
+		p.setHasPlayed(true);
 		playerDao.save(p);
 
 		return p;
 	}
-	
+
 	public Player tuerJoueur(int id) {
-		Player p = playerDao.findById(id).get();	
-		
+		Player p = playerDao.findById(id).get();
+
 		p.setDead(true);
 		playerDao.save(p);
-		
+
 		return p;
+	}
+
+	public int tourSuivant() {
+		List<Player> players = playerDao.findAll();
+
+		players.removeIf(p -> p.isDead());
+		for (Player p : players) {
+			p.setHasPlayed(false);
+			playerDao.save(p);
+		}
+
+		return players.size();
 	}
 }

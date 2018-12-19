@@ -42,10 +42,16 @@ public class PlayerController {
 	public Player seDeplacer(@PathVariable int id, @PathVariable int roomId) {
 		return business.seDeplacer(id, roomId);
 	}
-	
+
 	@ApiOperation(value = "Le joueur désigné par {id} meurt")
-	@PutMapping(value ="/player/{id}/kill")
+	@PutMapping(value = "/player/{id}/kill")
 	public Player tuerJoueur(@PathVariable int id) {
 		return business.tuerJoueur(id);
+	}
+
+	@ApiOperation(value = "Tour suivant : les joueurs sont tous configurés comme n'ayant pas joué leur tour, renvoie le nombre de joueurs encore en vie")
+	@GetMapping(value = "/players/nextTurn")
+	public int tourSuivant() {
+		return business.tourSuivant();
 	}
 }
