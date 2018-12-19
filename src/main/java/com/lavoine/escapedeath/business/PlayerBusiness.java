@@ -78,4 +78,19 @@ public class PlayerBusiness {
 
 		return players.size();
 	}
+
+	public boolean tourFini() {
+		List<Player> players = playerDao.findAll();
+		boolean res = true;
+
+		players.removeIf(p -> p.isDead());
+		for (Player p : players) {
+			if (!p.isHasPlayed()) {
+				res = false;
+				break;
+			}
+		}
+
+		return res;
+	}
 }

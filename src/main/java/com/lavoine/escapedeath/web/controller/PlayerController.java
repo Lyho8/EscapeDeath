@@ -55,4 +55,10 @@ public class PlayerController {
 	public int tourSuivant() {
 		return business.tourSuivant();
 	}
+
+	@ApiOperation(value = "Indique si les joueurs ont fini de jouer leur tour")
+	@GetMapping(value = "/players/endofturn")
+	public boolean tourFini() {
+		return business.tourFini();
+	}
 }
