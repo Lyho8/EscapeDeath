@@ -3,6 +3,7 @@ package com.lavoine.escapedeath.web.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -14,6 +15,7 @@ import com.lavoine.escapedeath.model.Player;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 public class PlayerController {
 
 	@Autowired
@@ -42,9 +44,9 @@ public class PlayerController {
 	public Player seDeplacer(@PathVariable int id, @PathVariable int roomId) {
 		return business.seDeplacer(id, roomId);
 	}
-	
+
 	@ApiOperation(value = "Le joueur désigné par {id} meurt")
-	@PutMapping(value ="/player/{id}/kill")
+	@PutMapping(value = "/player/{id}/kill")
 	public Player tuerJoueur(@PathVariable int id) {
 		return business.tuerJoueur(id);
 	}
