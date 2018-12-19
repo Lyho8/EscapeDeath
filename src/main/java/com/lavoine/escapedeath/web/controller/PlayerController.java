@@ -49,8 +49,9 @@ public class PlayerController {
 		return business.tuerJoueur(id);
 	}
 
-	@ApiOperation(value = "Tour suivant : les joueurs sont tous configurés comme n'ayant pas joué leur tour, renvoie le nombre de joueurs encore en vie")
-	@GetMapping(value = "/players/nextTurn")
+	@ApiOperation(value = "Tour suivant : les joueurs sont tous configurés comme n'ayant pas joué leur tour,"
+			+ " renvoie le nombre de joueurs encore en vie")
+	@PutMapping(value = "/players/nextturn")
 	public int tourSuivant() {
 		return business.tourSuivant();
 	}
