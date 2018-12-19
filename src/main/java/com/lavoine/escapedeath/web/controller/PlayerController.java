@@ -50,4 +50,17 @@ public class PlayerController {
 	public Player tuerJoueur(@PathVariable int id) {
 		return business.tuerJoueur(id);
 	}
+
+	@ApiOperation(value = "Tour suivant : les joueurs sont tous configurés comme n'ayant pas joué leur tour,"
+			+ " renvoie le nombre de joueurs encore en vie")
+	@PutMapping(value = "/players/nextturn")
+	public int tourSuivant() {
+		return business.tourSuivant();
+	}
+
+	@ApiOperation(value = "Indique si les joueurs ont fini de jouer leur tour")
+	@GetMapping(value = "/players/endofturn")
+	public boolean tourFini() {
+		return business.tourFini();
+	}
 }

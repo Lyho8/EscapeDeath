@@ -33,13 +33,13 @@ public class RoomController {
 		return business.listerJoueurs(id);
 	}
 
-	@ApiOperation(value = "Fournit la liste des joueurs présents dans la salle (sans filtre)")
+	@ApiOperation(value = "Fournit la liste des joueurs présents et visibles dans la salle")
 	@GetMapping(value = "/room/{id}/visibleplayers", produces = "application/json")
 	public List<Player> listerJoueursVisibles(@PathVariable int id) {
 		return business.listerJoueursVisibles(id);
 	}
 
-	@ApiOperation(value = "Fournit la liste des joueurs présents dans la salle (sans filtre)")
+	@ApiOperation(value = "Fournit la liste des joueurs présents et cachés dans la salle")
 	@GetMapping(value = "/room/{id}/hiddenplayers", produces = "application/json")
 	public List<Player> listerJoueursCaches(@PathVariable int id) {
 		return business.listerJoueursCaches(id);
